@@ -1,0 +1,157 @@
+<!--html-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Document</title>
+
+</head>
+
+<body>
+
+  <div id="modal">
+
+  <button>Close</button>
+
+  <p id="modal_content1">Hello World</p>
+
+  <p id="modal_content2">
+
+22222 ifue8fugfuyf8ug eur8y uufgui
+
+</p>
+
+</div>
+
+<div class="all">
+
+kurg euyrugfe ieruygfrug 
+
+<a id="1" href="#">rhyury iey</a>euifyhu7gfik uhyfuir
+
+ou8fy8yfr8u ruyhuf uryruyg ruyrug ufyuefei
+
+<a id="2" href="#">ifhuef</a> uifhue euyfuefy
+
+</div>
+
+
+</body>
+
+</html>
+
+
+<!--css-->
+
+
+body {
+
+  background: #20262E;
+
+  padding: 20px;
+
+  font-family: Helvetica;
+
+}
+
+
+#all {
+
+  background: #fff;
+
+  border-radius: 4px;
+
+  padding: 20px;
+
+  font-size: 25px;
+
+  text-align: center;
+
+  transition: all 0.2s;
+
+  margin: 0 auto;
+
+  width: 300px;
+
+}
+
+
+button {
+
+  background: #0084ff;
+
+  border: none;
+
+  border-radius: 5px;
+
+  padding: 8px 14px;
+
+  font-size: 15px;
+
+  color: #fff;
+
+}
+
+
+p {
+
+  background: #0084ff;
+
+  color: #fff;
+
+  margin-top: 40px;
+
+  width: 200px;
+
+}
+
+
+#banner-message.alt button {
+
+  background: #fff;
+
+  color: #000;
+
+}
+
+#modal {z-index: 300;
+
+width: 100%;
+
+height: 100%;
+
+opacity: 0.5;
+
+background-color: red;
+
+display: none;
+
+}
+
+#modal_content2 {display: none;}
+
+
+<!--js-->
+
+
+$('a').click(function(){$("#modal").css('display','block')});
+
+$('#modal, button').click(function(){$('#modal').css('display','none')});
+
+$('#1').click(function(){$('#modal_content1').css('display','block'),
+
+$('#modal_content2').css('display','none')});
+
+$('#modal_content2').css('display','none');
+
+$('#2').click(function(){$('#modal_content1').css('display','none'),
+
+$('#modal_content2').css('display','block')});
+
+//суть в том, чтобы при нажатии на определеную ссылку делать дисплэй ноне, кроме выбраного ссылкой. осталось только узнать. как это сократить
+
