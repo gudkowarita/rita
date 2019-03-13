@@ -1,3 +1,3 @@
-# rita
-There are excercises for learning
+# Learning
+There are excercises for learning<br>
 Здесь находятся учебные задачи
