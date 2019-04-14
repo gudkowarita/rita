@@ -1,0 +1,172 @@
+﻿<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Moda</title>
+		<link rel="stylesheet" href="style.css">
+<style>
+/*.modal {background-color: aqua; text-align: center;}
+h3 {font: bold;}
+img {margin-bottom: 1%;}*/
+
+.slideshow-container {
+max-width: 1000px;
+position: relative;
+margin: auto;
+}
+
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: .6s ease;
+border-radius: 0 3px 3px 0;
+}
+
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top:0;
+}
+
+.dot {
+cursor: pointer;
+height: 13px;
+width: 13px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color .6s ease;
+}
+
+.active, dot:hover {background-color: #717171;}
+
+.fade {
+-webkit-animation-name: fade;
+-webkit-animaton-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+from{opacity: .4}
+to{opacity: 1}
+}
+@keyframes fade{
+from{opacity: .4}
+to{opacity: 1}
+}
+</style>
+	</head>
+	<body>
+	
+	<!--<div class="modal">
+	<h3>picture</h3>	
+	<img src="gall.jpg">
+	</div>-->
+
+<div class="slideshow-container">
+	
+	<div class="mySlides fade">
+		<div class="numbertext">1/3</div>
+		<img src="wf7rjG8iCes.jpg" style="width: 100%" alt="">
+		<div class="text">Text</div>
+	</div>
+
+
+	<div class="mySlides fade">
+		<div class="numbertext">2/3</div>
+		<img src="RcCPZKEcEi8.jpg" style="width: 100%" alt="">
+		<div class="text">Text</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="numbertext">3/3</div>
+		<img src="Q59Gtj_ebDg.jpg" style="width: 100%" alt="">
+		<div class="text">Text</div>
+	</div>
+
+	<a class="prev" onclick="plusSlides(-1)">&#10094</a>
+	<a class="next" onclick="plusSlides(1)">&#10095</a>
+
+</div>
+<br>
+<div style="text-align: center;">
+	<span id="first" class="dot"></span>
+	<span class="dot" onclick="currentSlide(2)"></span>
+	<span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<br><input id="cl" type="submit" value="hey!">
+<input id="lc" type="submit" value="bye!">
+
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script>
+const dot1 = document.querySelector("#first");
+dot1.addEventListener('click', currentSlide1);
+function currentSlide1() {currentSlide(1);}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var i;
+var slides = document.querySelectorAll(".mySlides");
+var dots = document.querySelectorAll(".dot");
+
+if (n > slides.length) {
+slideIndex = 1
+}
+if (n < 1) {
+slideIndex = slides.length
+}
+for (i=0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+for (i=0; i< dots.length; i++){
+dots[i].className = dots[i].className.replace("active","");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className+= " active";
+}
+
+const qqq = document.querySelector(".slideshow-container"),
+      eee = document.querySelector("#lc"),
+      www = document.querySelector("#cl");
+qqq.style.display='none';
+function change() {
+qqq.style.display='block';
+}
+function nochange() {
+qqq.style.display='none';
+}
+www.addEventListener('click',change);
+eee.addEventListener('click',nochange);
+		</script>
+
+</body>
+</html>
